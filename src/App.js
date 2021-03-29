@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { render } from 'react-dom';
 import { AgGridReact, AgGridColumn } from 'ag-grid-react';
 import Tooltip from './Tooltip';
 
@@ -15,6 +14,7 @@ for (let i = 1; i <= 100; i++) {
 
 const App = () => {
     const [gridApi, setGridApi] = useState(null);
+    // eslint-disable-next-line
     const [gridColumnApi, setGridColumnApi] = useState(null);
     const [rowData, setRowData] = useState([]);
     const [showFilters, setShowFilters] = useState(true);
@@ -272,7 +272,7 @@ const App = () => {
                                 >
                                     {level.map((lev) => (
                                         <option
-                                            selected={lev == 70}
+                                            selected={lev === 70}
                                             key={'min' + lev}
                                             value={lev}
                                         >
@@ -292,7 +292,7 @@ const App = () => {
                                 >
                                     {level.map((lev) => (
                                         <option
-                                            selected={lev == 70}
+                                            selected={lev === 70}
                                             key={'max' + lev}
                                             value={lev}
                                         >
